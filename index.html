@@ -46,20 +46,31 @@
 
     .spotify-embed {
       margin-top: 40px;
+      opacity: 0;
+      animation: fade-in 1s ease-in-out forwards;
     }
 
     .stream-icons {
       margin-top: 30px;
+      opacity: 0;
+      animation: fade-in 1s ease-in-out forwards;
     }
 
     .stream-icons i {
       font-size: 32px;
       margin-right: 10px;
       color: #fff;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .stream-icons i:hover {
+      transform: scale(1.2);
     }
 
     .download-section {
       margin-top: 10px;
+      opacity: 0;
+      animation: fade-in 1s ease-in-out forwards;
     }
 
     .download-link {
@@ -67,11 +78,18 @@
       color: #fff;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .download-link:hover {
+      color: #ccc;
     }
 
     .back-link {
       margin-top: 30px;
       font-size: 14px;
+      opacity: 0;
+      animation: fade-in 1s ease-in-out forwards;
     }
 
     .back-link a {
@@ -86,6 +104,17 @@
     .copyright {
       font-size: 12px;
       margin-top: 30px;
+      opacity: 0;
+      animation: fade-in 1s ease-in-out forwards;
+    }
+
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
@@ -106,14 +135,14 @@
   <!-- Icone dei servizi di streaming -->
   <div class="stream-icons">
     <i class="fab fa-spotify"></i>
-    <i class="fab fa-youtube"></i>
     <i class="fab fa-apple"></i>
+    <i class="fab fa-youtube"></i>
     <i class="fab fa-soundcloud"></i>
   </div>
 
   <!-- Sezione download -->
   <div class="download-section">
-    <a class="download-link" href="https://rinfiggi.bandcamp.com" target="_blank" style="color: #fff;">download from bandcamp</a>
+    <a class="download-link" href="https://rinfiggi.bandcamp.com" target="_blank">download from bandcamp</a>
   </div>
 
   <!-- Tasto per tornare alla homepage -->
@@ -125,5 +154,16 @@
   <div class="copyright">
     &copy; rinfiggi. all rights reserved.
   </div>
+
+  <script>
+    // Funzione per attivare le animazioni dopo il caricamento della pagina
+    window.addEventListener("load", function() {
+      document.querySelector(".spotify-embed").style.animationDelay = "0.5s";
+      document.querySelector(".stream-icons").style.animationDelay = "0.7s";
+      document.querySelector(".download-section").style.animationDelay = "0.9s";
+      document.querySelector(".back-link").style.animationDelay = "1.1s";
+      document.querySelector(".copyright").style.animationDelay = "1.3s";
+    });
+  </script>
 </body>
 </html>
