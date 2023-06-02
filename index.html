@@ -48,30 +48,25 @@
       margin-top: 40px;
     }
 
-    .stream-links {
+    .stream-icons {
       margin-top: 30px;
     }
 
-    .stream-links a, .download-link {
-      display: inline-block;
-      margin: 5px;
-      padding: 10px 20px;
-      background-color: #fff;
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
+    .stream-icons i {
+      font-size: 32px;
+      margin-right: 10px;
+      color: #fff;
     }
 
     .download-section {
       margin-top: 10px;
     }
 
-    .download-title {
-      font-size: 16px;
-    }
-
-    .download-links {
+    .download-link {
       margin-top: 10px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
     }
 
     .back-link {
@@ -87,8 +82,14 @@
     .back-link a:hover {
       color: #999;
     }
+
+    .copyright {
+      font-size: 12px;
+      margin-top: 30px;
+    }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/95297968bf.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <!-- Intestazione -->
@@ -102,26 +103,27 @@
     <iframe src="https://open.spotify.com/embed/album/4O5lYtQATvJVYcNl503T5r" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
   </div>
 
-  <!-- Link ai servizi di streaming -->
-  <div class="stream-links">
-    <a href="https://open.spotify.com/album/4O5lYtQATvJVYcNl503T5r?si=KRV01CICRoywAtnMTnkv2A&utm_medium=share&utm_source=linktree" target="_blank">spotify</a>
-    <a href="https://www.youtube.com/playlist?list=OLAK5uy_mD2ZhGbTz_zBR3_2JSzCKaQwsy_xtP7XI" target="_blank">youtube</a>
-    <a href="https://music.apple.com/it/album/_/1641350127?app=music&at=1000lHKX&ct=linktree_http&itscg=30200&itsct=lt_m&ls=1&mt=1" target="_blank">apple music</a>
-    <a href="https://tidal.com/album/244571294" target="_blank">tidal</a>
-    <a href="https://soundcloud.com/rinfiggi/sets/voicemail" target="_blank">soundcloud</a>
+  <!-- Icone dei servizi di streaming -->
+  <div class="stream-icons">
+    <i class="fab fa-spotify"></i>
+    <i class="fab fa-youtube"></i>
+    <i class="fab fa-apple"></i>
+    <i class="fab fa-soundcloud"></i>
   </div>
 
   <!-- Sezione download -->
   <div class="download-section">
-    <h3 class="download-title">download</h3>
-    <div class="download-links">
-      <a class="download-link" href="https://rinfiggi.bandcamp.com" target="_blank">bandcamp</a>
-    </div>
+    <a class="download-link" href="https://rinfiggi.bandcamp.com" target="_blank" style="color: #fff;">download from bandcamp</a>
   </div>
 
   <!-- Tasto per tornare alla homepage -->
   <div class="back-link">
-    <a href="https://rinfiggi.eu">&lt;&lt; home</a>
+    <a href="https://home.rinfiggi.eu">&lt;&lt; home</a>
+  </div>
+
+  <!-- Riga di copyright -->
+  <div class="copyright">
+    &copy; rinfiggi. all rights reserved.
   </div>
 </body>
 </html>
